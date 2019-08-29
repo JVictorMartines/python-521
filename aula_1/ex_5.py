@@ -15,12 +15,11 @@ payload = {
 
 
 
-#response = requests.put(DOMAIN_URL.format(user_id), payload)
+response = requests.put(DOMAIN_URL.format(user_id), payload)
 
 response = requests.get(DOMAIN_URL.format(user_id))
 
 if response.status_code == 200:
-	#print('Usuario atualizado com sucesso')
-	print(response.json())
+	print('Usuario atualizado com sucesso')
 else:
 	print('Erro ao atualizar o usuario')

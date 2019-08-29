@@ -1,0 +1,22 @@
+version: "3"
+volumes:
+  postgres:
+services:
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
+      - 4671-5672:4671-5672
+      - 25672:25672
+    volumes:
+      - postgres:/var/lib/postgresql/data
+  rabbitmq:
+    image:  
+  apache:
+    image: httpd
+    ports:
+      - 8000:80
+  portainer:
+    image: portainer/portainer
+    ports:
+      - 9000:9000
